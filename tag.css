@@ -1,0 +1,115 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: lightblue;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	width: 500px;
+	background-color: white;
+	box-shadow: 0px 0px 10px black;
+	padding: 20px 30px;
+	border-radius: 5px;
+}
+h1{
+	padding: 0px 30px 10px 0px;
+}
+.container p{
+	padding-bottom: 20px;
+}
+.input-container{
+	    border: 1px solid black;
+    display: flex;
+    border-radius: 5px;
+    padding: 5px 5px 1px 5px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.input{
+    flex: 1 0 0;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.cancel{
+	background: #ccc;
+    padding: 3px 6px 3px 5px;
+    border-radius: 50%;
+    font-size: 13px;
+    box-shadow: 0 0px 5px 1px rgba(0,0,0,0.2);
+}
+.tag{
+	margin: 0 5px 5px 5px;
+    cursor: pointer;
+    background: rgb(224, 220, 220);
+    padding: 0px 10px;
+    border-radius: 5px;
+    height: 30px;
+    user-select: none;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.tag:hover{
+	background: rgb(230,230,230);
+}
+.cancel:hover{
+	background: rgb(215, 215, 220);
+}
+ul{
+	 width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+ul li{
+	list-style: none;
+}
+.paraButt{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 20px;
+	font-size: 17px;
+	align-items: center;
+	text-align: center;
+}
+button{
+	background-color: blue;
+	padding: 8px 25px;
+	color: white;
+	border-radius: 7px;
+	outline: none;
+	border:none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+button:hover{
+	background-color: darkblue;
+}
+
+.newElement{
+	list-style: none;
+}
+
+.nullMassage{
+	box-shadow: 0px 0px 4px #222;
+	position:relative;
+	bottom: 10px;
+	color: red;
+	border-radius: 5px;
+	padding: 5px 8px;
+	display: none;
+}

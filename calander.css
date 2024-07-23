@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    user-select: none;
+    background-color: rgb(140, 86, 190);
+    height: 100vh;
+}
+
+.mainbox {
+    width: 450px;
+    background-color: #222;
+    box-shadow: 0px 0px 10px white;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+div h1 {
+    color: tan;
+    text-decoration: red underline;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.box {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.box span{
+    width: 150px;
+    padding: 10px 50px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    background-color: wheat;
+}

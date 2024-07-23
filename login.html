@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b6b6b6;
+        }
+
+        input {
+            padding: 8px 10px;
+            width: 100%;
+            margin: 7px 0px;
+            background-color: rgb(245, 239, 209);
+            outline: none;
+            border: 1px solid #222;
+            font-size: 15px;
+            border-radius: 4px;
+        }
+
+        form {
+            border-radius: 7px;
+            padding: 10px;
+            font-weight: 550;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            border: 1px solid black;
+            background-color: rgb(227, 244, 247);
+            animation: move 0.5s linear;
+        }
+
+        @keyframes move {
+            0% {
+                scale: 0.9;
+            }
+
+            100% {
+                scale: 1;
+            }
+        }
+
+        .log-sign {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 7px 20px;
+            font-weight: 550;
+            background-color: rgb(41, 37, 38);
+            outline: none;
+            border-radius: 6px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #b4adad;
+            color: #222;
+        }
+
+        button:active {
+            color: red;
+        }
+
+        .typing {
+            color: red;
+        }
+
+        .heading {
+            margin-bottom: 30px;
+        }
+
+        .typed-cursor {
+            color: blue;
+        }
+
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="" class="form-class">
+            <h1>Login page</h1>
+            <h2 class="heading">
+                <span class="typing"></span>
+            </h2>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="Enter your email id" id="email"><br>
+            <label for="pass">Password:</label>
+            <input type="password" placeholder="Enter your password" id="pass">
+            <div class="log-sign">
+                <button class="login" type="submit">Login</button>
+                <button class="signup" type="button">Signup</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+
+        setTimeout(function () {
+            var typed = new Typed(".typing", {
+                strings: ["Login", "Sign-up", "page"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            });
+        }, 500);
+
+        var login = document.querySelector(".signup");
+        login.addEventListener("click", function () {
+            console.log("login button clicked");
+            // location.href = 'login.html'
+            location.assign('signup.html')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Otp</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .otp {
+            color: #8a2be2;
+        }
+
+        input {
+            border: 1px solid #8a2be2;
+            font-size: 20px;
+            outline: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        button {
+            background-color: #8a2be2;
+            color: white;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            margin-top: 15px;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        button:active {
+            color: red;
+        }
+
+        .container {
+            box-shadow: 0px 0px 10px #222;
+            border-radius: 5px;
+            padding: 10px 50px 20px 50px;
+            display: flex;
+            width: fit-content;
+            flex-direction: column;
+        }
+
+        #otp {
+            color: #8a2be2;
+        }
+
+        h2 {
+            display: flex;
+        }
+
+        .enterOtp,
+        .otp {
+            display: none;
+        }
+        .tMatchResult{
+            color: green;
+            display: none;
+        }
+        .fMatchResult{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Your OTP is : <span id="otp"></span></h2>
+        <div>
+            <input type="number" class="inputTag" placeholder="Enter OTP">
+            <span class="tMatchResult"></span>
+            <span class="fMatchResult"></span>
+        </div>
+        <button type="submit" class="GenerateOtp" onclick="generateOTP()">Generate OTP</button>
+        <button type="submit" class="enterOtp" onclick="matchOtp()">Enter OTP</button>
+    </div>
+
+    
+    <script>
+        let otpValueMatch;
+        var enterOtp = document.querySelector(".enterOtp");
+        var inputTag = document.querySelector('.inputTag');
+        let generateOtpButton = document.querySelector('.GenerateOtp');
+        let spanOTP = document.getElementById('otp');
+        function generateOTP() {
+            var digits = '0123456789';
+            var otpValue = '';
+            for (let i = 0; i < 6; i++) {
+                var index = Math.floor(Math.random() * digits.length);
+                otpValueMatch=otpValue = otpValue + digits[index];
+            }
+
+            // event.preventDefault();
+            spanOTP.innerHTML = otpValue;
+            spanOTP.style.display = "block";
+            generateOtpButton.style.display = 'none'
+            enterOtp.style.display = 'block'
+            inputTag.style.display = 'block'
+
+        }
+
+        function matchOtp() {
+                var inputGetValue = document.querySelector('.inputTag').value;
+                var tMatchResult = document.querySelector('.tMatchResult');
+                var fMatchResult = document.querySelector('.fMatchResult')
+                if (otpValueMatch === inputGetValue) {
+                    tMatchResult.innerHTML='OTP Matched';
+                    tMatchResult.style.display='block';
+                    fMatchResult.style.display='none';
+                }
+                else {
+                    tMatchResult.style.display='none';
+                    fMatchResult.innerHTML='Wrong OTP';
+                    fMatchResult.style.display='block';
+                }
+                inputGetValue.value='';
+            }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bulb On Off projects</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		h1{
+			text-align: center;
+			margin-left:-120px;
+			color:white;
+			margin-bottom: 40px;
+			color: #eee;
+		}
+		.container{
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		img{
+			margin-bottom:20px;
+		}
+
+		button{
+			padding:5px 20px;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			margin-inline: 20px;
+			font-size:19px ;
+			background-color:#222;
+			color: white;
+			font-weight: 550;
+			transition: all 0.3s ease;
+		}
+		button:hover{
+			background-color:darkgreen;
+			color: white;
+		}
+		button:active{
+			background-color: red;
+			color:black; :
+		}
+		.buttons{
+			margin-left:-100px;
+		}
+	</style>
+</head>
+<body>
+       <div class="container">
+       	    <div class="bulb">
+       	    	        <h1>Bulb <span id="OnOff">Off</span></h1>
+                            <img id="image" src="pic_bulboff.gif">
+       	    	    <div class="buttons">
+       	    	        <button onclick="bulbOn()">Bulb On</button>
+       	    	        <button onclick="bulbOff()">Bulb Off</button>
+       	            </div>
+       	    </div>
+
+       </div>
+       <script>
+       	let image=document.querySelector("#image");
+       	let OnOff=document.querySelector("#OnOff");
+       	function bulbOn() {
+       	      image.src="pic_bulbon.gif";
+       	      OnOff.innerHTML="On";
+       	      OnOff.style.color="yellow";
+       	      // OnOff.classList.add("ON");
+       	}
+       	function bulbOff() {
+       	      image.src="pic_bulboff.gif";
+       	      OnOff.innerHTML="Off";
+       	      OnOff.style.color="white";
+       	      // OnOff.classList.add("OFF");
+       	}
+       </script>
+</body>
+</html>

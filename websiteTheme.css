@@ -1,0 +1,141 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+body{
+	height: 100vh;
+	background-color: #0000ff1a;
+}
+
+.menu .abc{
+	color: #C2BC3F;
+}
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: blue;
+	color: white;
+	padding: 10px 0px;
+	font-size: 26px;
+	box-shadow:0px 0px 10px #222 ;
+	transition: all 0.3s ease;
+}
+.logo{
+	font-weight: 600;
+}
+.logo span{
+	color: red;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
+	padding-inline: 16px;
+	font-size: 18px;
+}
+.bgChanger span {
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 6px;
+    background-color: darkblue;
+}
+
+.bgChanger .sun {
+    display: none;
+}
+
+.bgChanger .fa-moon,
+.bgChanger .sun {
+    padding: 0;
+    margin: 0;
+}
+.moon{
+	padding: 5px 18px;
+	margin-inline: 10px;
+}
+.painting{
+	padding: 5px 18px;
+}
+
+.contents{
+	font-size: 26px;
+	margin-top: 50px;
+	padding: 130px 20px 20px 50px;
+    box-sizing: border-box;
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.contents p{
+	padding: 10px 0px;
+	font-size: 20px;
+}
+.contents span{
+	color: blue;
+}
+.explore{
+	background-color: blue;
+	padding: 8px 15px;
+	width: 158px;
+	font-size: 20px;
+	color: white;
+	font-weight: 600;
+}
+
+.changer{
+	position: relative;
+}
+.colors{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 10px;
+	top: 39px;
+	box-shadow: 0px 0px 10px black ;
+	display: none;
+	transition: all 0.3s ease;
+}
+.colors .text{
+	font-size: 17px;
+	background-color: white;
+	padding-bottom:10px ;
+	color: black;
+	text-align: center;
+}
+.colors .color{
+	border-radius: 50%;
+	border: 1px solid #222;
+	cursor: pointer;
+	width: 100px;
+	margin: 1px;
+}
+.down{
+	font-size: 12px;
+	transition: all 0.3s ease;
+}
+.color-1{
+	background-color: blue;
+}
+.color-2{
+	background-color: yellow;
+}
+.color-3{
+	background-color: green;
+}
+.color-4{
+	background-color: orange;
+}
+.color-5{
+	background-color: tan;
+}
+.color-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 200px;
+	height: 40px;
+}

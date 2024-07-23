@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width:95%;
+    height: auto;
+    margin-top: 50px;
+    /* margin: 60px; */
+    border-radius: 10px;
+    border:2px solid #222;
+    padding:12px 8px;
+    box-shadow: 0px 2px 8px #222;
+}
+
+.accordian{
+    background-color: rgb(216, 216, 253);
+    padding: 15px;
+    margin: 8px 0px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.accordian p{
+    padding-top:7px;
+}
+.accordian h1{
+    font-size: 20px;
+    position: relative;
+    cursor:not-allowed;
+    position: relative;
+}
+.accordian .ansbox{
+    /* position: absolute; */
+    box-sizing: border-box;
+    display: none;
+    line-break:strict;
+    font-size: 18px;
+    color:black;
+}
+
+/* .accordian:active{
+    height: 100px;
+} */
+/* .accordian:active .ansbox{
+    display: block;
+} */

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Light on text</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #222;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            font-size: 100px;
+            font-weight: 650;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #2b2b2b;
+        }
+
+        .container span {
+            animation: move 12s infinite;
+            animation-fill-mode: forwards;
+            background: transparent;
+/*            text-shadow: 0px 0px 10px #c2c2c2; /* Set default text shadow */*/
+        }
+
+        /* Add different animation delays for each span */
+        .container span:nth-child(1) {
+            animation-delay: 1s;
+        }
+
+        .container span:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .container span:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        .container span:nth-child(4) {
+            animation-delay: 4s;
+        }
+
+        .container span:nth-child(5) {
+            animation-delay: 5s;
+        }
+
+        .container span:nth-child(6) {
+            animation-delay: 6s;
+        }
+
+        .container span:nth-child(7) {
+            animation-delay: 7s;
+        }
+        .container span:nth-child(8) {
+            animation-delay: 8s;
+        }
+        .container span:nth-child(9) {
+            animation-delay: 9s;
+        }
+        .container span:nth-child(10) {
+            animation-delay: 10s;
+        }
+        .container span:nth-child(11) {
+            animation-delay: 11s;
+        }
+        .container span:nth-child(12) {
+            animation-delay: 12s;
+        }
+
+        @keyframes move {
+            0% {
+            color:#fcf7f7;
+                text-shadow: 0px 0px 7px #c2c2c2; /* Default text shadow */
+            }
+
+            100% {
+            	color: #282828;
+/*                text-shadow: 0px 0px 20px #FFFFFF, 0px 0px 40px #FFFFFF, 0px 0px 60px #FFFFFF, 0px 0px 80px #ffffff*/
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <span>T</span>
+    <span>a</span>
+    <span>u</span>
+    <span>s</span>
+    <span>e</span>
+    <span>e</span>
+    <span>f</span>
+    <span>_</span>
+    <span>K</span>
+    <span>h</span>
+    <span>a</span>
+    <span>n</span>
+</div>
+</body>
+</html>

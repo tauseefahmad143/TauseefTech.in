@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    /* flex-direction: column; */
+    animation: body-animate 1s ease infinite;
+    /* animation;name duration timing-func delay iteration-count direction fill mode play-state; */
+}
+
+@keyframes body-animate {
+    0% {
+        background-image: linear-gradient(to bottom, orange, white, green);
+    }
+
+    50% {
+        background-image: linear-gradient(90deg, orange, white, green);
+    }
+
+    100% {
+        background-image: linear-gradient(180deg, green, white, orange);
+    }
+
+}
+
+.main-box {
+    margin-top: 30px;
+    width: 400px;
+    height: 244px;
+    border: 2px solid black;
+    border-left: none;
+}
+
+.bottom-upper {
+    margin-top: 292px;
+    position: absolute;
+    left: 445px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(168, 156, 156);
+}
+
+.bottom-middle {
+    margin-top: 320px;
+    position: absolute;
+    left: 413px;
+    width: 130px;
+    height: 28px;
+    background-color: rgb(168, 156, 156);
+}
+
+.danda {
+    width: 14px;
+    border-radius: 5px;
+    height: 88vh;
+    margin-top: 22px;
+    background-color: silver;
+}
+
+.box {
+    /* border:2px solid black; */
+    height: 80px;
+    width: 100%;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}
+
+.white {
+    background-color: white;
+}
+
+.white,
+.green {
+    border-top: none;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+}
+
+.wheel img {
+    border-radius: 50%;
+    height: 81px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    /* border:2px solid black; */
+    align-items: center;
+    animation: wheel-animate 8s linear infinite;
+}
+
+
+@keyframes wheel-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*
+.stick18{
+    height:78px;
+    width:1px;
+    transform:rotate(50%);
+    background-color:black;
+}
+
+.stick19{
+    height:78px;
+    width:1px;
+    transform:rotate(0deg);
+    background-color:black;
+} */

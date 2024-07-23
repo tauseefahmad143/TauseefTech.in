@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(210, 208, 208);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .clock {
+            text-align: center;
+            color: #222;
+            font-size: 35px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+         
+    </style>
+</head>
+
+<body onmousemove="updateIndianTime()">
+    <div>
+        <div class="clock">
+            <span id="hour">-</span>: <span id="minute">-</span>: <span id="second">-</span>
+        </div>
+    </div>
+    <script>
+
+        function updateIndianTime() {
+            var options = { timeZone: 'Asia/Kolkata' };
+            var indianTime = new Date().toLocaleString('en-US', options);
+
+            var timeComponents = indianTime.split(',')[1].trim().split(':');
+            var hours = parseInt(timeComponents[0], 10);
+            var minutes = parseInt(timeComponents[1], 10);
+            let seconds = parseInt(timeComponents[2], 10);
+
+            let hourss = String(hours).padStart(2, '0');
+            document.querySelector("#hour ").textContent = hourss;
+
+            let minutess = String(minutes).padStart(2, '0');
+            document.querySelector("#minute ").textContent = minutess;
+
+            var secondss = String(seconds).padStart(2, '0');
+            document.querySelector("#second ").textContent = secondss;
+            
+        }
+
+        updateIndianTime();
+
+        setInterval(updateIndianTime, 1000);
+    </script>
+
+</body>
+
+</html>
